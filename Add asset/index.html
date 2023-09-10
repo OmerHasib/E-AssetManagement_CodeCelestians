@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Add Asset Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h3 align="Center">Add an Asset</h3>
+            <form id="vaccinationForm">
+                <hr color="Red">
+                <br><br>
+                <label class="left-align" for="name">Name of the asset:</label>
+                <input type="text" id="name" name="name" required>
+
+                <h3><label class="left-align" for="photoId">Category</label></h3>
+                <input type="radio" id="Laptop" name="vaccine" value="Laptop">
+                    <label for="Laptop">Laptop</label><br>
+                <input type="radio" id="Mobile" name="vaccine" value="Mobile">
+                    <label for="Mobile">Mobile</label><br>
+                <input type="radio" id="SmartWatch" name="vaccine" value="SmartWatch">
+                    <label for="SmartWatch">SmartWatch</label><br>
+                <input type="radio" id="Smart TV" name="vaccine" value="Smart TV">
+                    <label for="Smart TV">Smart TV</label>
+                    <br>
+                <input type="radio" id="other" name="vaccine" value="other">
+                    <label for="other">Other</label>
+                <input type="text" id="other" name="other" required><br><br>
+
+                <label class="left-align" for="desc">Description:</label>
+                <input type="text" id="desc" name="desc" required><br><br>
+                
+
+                <!-- <label class="left-align" for="preferredDate">Preferred Date (dd/mm/yyyy):</label>
+                <Center>
+                <input type="text" id="preferredDate" name="preferredDate" pattern="\d{2}/\d{2}/\d{4}" required>
+                </Center> -->
+
+                
+
+                <input type="checkbox" id="acknowledgement" name="acknowledgement">
+                <label class="left-align" for="acknowledgement">Check this to receive an acknowledgement:</label>
+                <br><br>
+                
+                
+                <button type="button" id="validateButton">Validate</button>
+                <button type="button" id="resetButton">Reset</button>    
+            </form>
+
+             <div class="output-box">
+                <div id="output"></div>
+            </div>
+            <div align="left" id="homeButtonDiv">
+                <button id="homeButton">Home</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
