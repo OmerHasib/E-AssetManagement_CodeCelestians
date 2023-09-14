@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Borrowing Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit {
+            background-color: #e93701;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .submit :hover {
+            background-color: #24b300;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Asset Borrowing Request</h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="assetType">Select Asset Type:</label>
+                <select id="assetType" name="assetType">
+                    <option value="laptop">Laptop</option>
+                    <option value="mobile">Mobile</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="ebook">Books</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="searchAsset">Select Available Asset:</label>
+                <select id="searchAsset" name="searchAsset">
+                    <!-- Options will be dynamically added here -->
+                </select>
+            </div>
+            <div class="form-group" id="otherAssetInput" style="display: none;">
+                <label for="otherAsset">Enter Required Asset:</label>
+                <input type="text" id="otherAsset" name="otherAsset" placeholder="Specify the asset">
+            </div>
+            <a href="request.html" class="submit" >Raise Request</a>
+             <a href="employee_homepage.html" class="submit" >Back To Profile</a>
+        </form>
+    </div>
+
+    <script>
+        // Asset data based on type (you can replace this with actual data)
+        const assetData = {
+            laptop: ["ASUS ROG Strix SCAR 17, Model: G733QS-HG003T, RAM: 32GB , ROM: 2TB SSD, Processor: AMD Ryzen 9 7945HX",
+             "Dell Latitude 7430,Model: 7430-CTO, RAM: 16GB, ROM: 512GB SSD, Processor: Intel Core i7-1260P", 
+             "MSI Katana GF76, Model: GF76-11UDR-001, RAM: 16GB, ROM: 512GB SSD, Processor: Intel Core i7-11800H"],
+            mobile: ["Name: Samsung Galaxy S23 Ultra, Model: SM-S908U , RAM: 8GB/12GB, ROM: 128GB/256GB/512GB/1TB",
+                    "Name: Google Pixel 7 Pro ,Model: G2PW , RAM: 12GB, ROM: 128GB/256GB", 
+                    "Name: OnePlus 10 Pro, Model: NE2210, RAM: 8GB/12GB, ROM: 128GB/256GB"],
+            tablet: ["Name: Samsung Galaxy Tab S8 Ultra, Model: SM-X900UZKAXAR, RAM: 8GB/12GB/16GB, ROM: 128GB/256GB/512GB",
+             "Name: Microsoft Surface Pro 8, Model: 1950/1951, RAM: 8GB/16GB/32GB, ROM: 128GB/256GB/512GB",
+              "Name: Lenovo Tab P12 Pro, Model: TB-K610F, RAM: 6GB/8GB, ROM: 128GB/256GB"],
+            ebook: ["Java: A Beginner's Guide", "C++: A Modern Approach:", "JavaScript: The Definitive Guide:"],
+          other: ['Specify The required Type the In the Below Description']
+        };
+        function handleAssetTypeChange() {
+            const assetTypeSelect = document.getElementById("assetType");
+            const otherAssetInput = document.getElementById("otherAssetInput");
+            const selectedAssetType = assetTypeSelect.value;
+
+            if (selectedAssetType === "other") {
+                otherAssetInput.style.display = "block";
+            } else {
+                otherAssetInput.style.display = "none";
+            }
+        }
+        // Function to populate the searchAsset select based on selected assetType
+        function populateAssetOptions() {
+            const assetTypeSelect = document.getElementById("assetType");
+            const searchAssetSelect = document.getElementById("searchAsset");
+            const selectedAssetType = assetTypeSelect.value;
+            const assets = assetData[selectedAssetType] || [];
+
+            // Clear existing options
+            searchAssetSelect.innerHTML = "";
+
+
+            // Add new options
+            assets.forEach((asset) => {
+                const option = document.createElement("option");
+                option.value = asset;
+                option.textContent = asset;
+                searchAssetSelect.appendChild(option);
+            });
+        }
+
+        // Add an event listener to the assetType dropdown to update options
+        const assetTypeSelect = document.getElementById("assetType");
+        assetTypeSelect.addEventListener("change", populateAssetOptions);
+        
+        // Initialize options based on the default selected asset type
+        populateAssetOptions();
+
+        assetTypeSelect.addEventListener("change", handleAssetTypeChange);
+
+        // Initialize the state based on the default selected asset type
+        handleAssetTypeChange();
+
+    </script>
+</body>
+</html>

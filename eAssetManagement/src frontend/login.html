@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="style1.css"> -->
+    <title>Sign in</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+  
+</head>
+
+
+<body>
+    
+        
+       <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Pune, Maharshtra</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class=""></small>
+               </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+91 9319370096</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"></i>E-Asset Management</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="user_registration.html" class="nav-item nav-link">User Registration</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
+                    <div class="dropdown-menu fade-up m-0">
+
+                        <a href="login.html" class="dropdown-item">User/Admin login</a>
+                    </div>
+                </div>
+             
+    </nav>
+    <!-- Navbar End -->
+
+        <!-- Login -->
+        <div class="container-fluid " id="user-login" style="display: block;" >
+            <div class="container">
+                    <div class="col-lg-4 py-5" style="margin: auto;">
+                        <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-4 wow zoomIn" >
+                            <h2 class="text-white mb-3">User Login</h2>
+                            <form id="login-form">
+                                <div class="row g-3">   
+                                    <div class="col-12 ">
+                                        <input type="text" id="name" class="form-control border-0" placeholder="Username/Email" style="height: 35px;"  required>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <input type="password" required id="password" class="form-control border-0" placeholder="Password" style="height: 35px;"  required>
+                                    </div>
+                                 
+                                    <div class="col-12">
+                                        <button class="btn btn-dark w-100 py-2" type="submit">Sign in</button>
+                                    </div>
+                                    <p style="color:white;">Don't have an account ? <a href="user_registration.html" style="color:white;" class="signup-link">Sign up</a></p>
+                                </div>
+                            </form>
+                            <p><a href="#" style="color:black; text-decoration:underline" style="color:white;" onclick="toggleLogin()">Switch to Admin Login</a></p>
+                        </div>
+                    </div>
+                </div>
+        
+        </div> 
+
+         <!-- Admin -->
+        <div class="container-fluid " id="admin-login" onsubmit="return loginAdmin()" style="display: none;" >
+            <div class="container">
+                    <div class="col-lg-4 py-5" style="margin: auto;">
+                        <div class="bg-primary h-100 d-flex flex-column justify-content-center text-center p-4 wow zoomIn" >
+
+                            <h2 class="text-white mb-3">Admin Login</h2>
+                            <form id="admin-form">
+                                <div class="row g-3">   
+                                    <div class="col-12 ">
+                                        <input type="text" id="adminUsername" class="form-control border-0" placeholder="Username/Email" style="height: 35px;"  required>
+                                    </div>
+                                    <div class="col-12 ">
+                                        <input type="password" required id="adminPassword" class="form-control border-0" placeholder="Password" style="height: 35px;"  required>
+                                    </div>
+                                 
+                                    <div class="col-12">
+                                        <button class="btn btn-dark w-100 py-2" type="submit">Sign in</button>
+                                    </div>
+                                    <p style="color:white;">Don't have an account ? <a href="user_registration.html" style="color:white;" class="signup-link">Sign up</a></p>
+                                </div>
+                            </form>
+                            <p><a href="#" style="color:black; text-decoration:underline" onclick="toggleLogin()">Switch to User Login</a></p>
+                        </div>
+                    </div>
+                </div>
+        
+        </div>
+        
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("login-form");
+          
+            form.addEventListener("submit", function(event) {
+              event.preventDefault();
+              var name = document.getElementById("name").value;
+              var password = document.getElementById("password").value;
+  
+              //stored data in local storage
+              const userData = JSON.parse(localStorage.getItem(name))
+        
+            if (userData && userData.password === password) {
+                alert("Login successsful.");
+                window.location.href = 'employee_homepage.html';
+
+            } else {
+                alert("Login failed. Check your credentials.");
+            }
+            document.getElementById("login-form").reset();
+            
+            });
+          });
+          
+          function loginAdmin() {
+            // Admin login logic here
+            var adminUsername = document.getElementById("adminUsername").value;
+            var adminPassword = document.getElementById("adminPassword").value;
+
+            if (adminUsername === "Admin" && adminPassword === "1234") {
+                alert("Admin login successful!");
+                document.getElementById("admin-form").reset();
+                window.location.href = 'admin_homepage.html';
+
+            } else {
+               alert("Admin login failed!") ;
+            }
+          
+            return false; // Prevent form submission
+        }
+
+        function toggleLogin() {
+            var userLogin = document.getElementById("user-login");
+            var adminLogin = document.getElementById("admin-login");
+
+            // Toggle the visibility of user and admin login forms
+            if (userLogin.style.display === "block") {
+                userLogin.style.display = "none";
+                adminLogin.style.display = "block";
+            } else {
+                userLogin.style.display = "block";
+                adminLogin.style.display = "none";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

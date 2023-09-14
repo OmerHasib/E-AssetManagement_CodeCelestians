@@ -1,0 +1,112 @@
+[
+    {
+        "UniqueId":1,
+        "Name": "John Doe",
+        "Role": "Admin",
+        "Telephone": "1234567890",
+        "Email": "john@example.com",
+        "Username": "johndoe123",
+        "Password": "Password@1"
+    },
+    {
+        "UniqueId":2,
+        "Name": "Jane Doe",
+        "Role": "Borrower",
+        "Telephone": "9876543210",
+        "Email": "jane@example.com",
+        "Username": "janedoe456",
+        "Password": "Password@2"
+    },
+    {
+        "UniqueId":3,
+        "Name": "Jannie Doe",
+        "Role": "Borrower",
+        "Telephone": "9676583981",
+        "Email": "jannie@example.com",
+        "Username": "janniedoe67",
+        "Password": "Password3"
+    },
+    {
+        "UniqueId":4,
+        "Name": "Ram",
+        "Role": "Admin",
+        "Telephone": "9899867650",
+        "Email": "ram@example.com",
+        "Username": "ram988",
+        "Password": "Password@4"
+    },
+    {
+        "UniqueId":5,
+        "Name": "Shyam",
+        "Role": "Admin",
+        "Telephone": "9889454321",
+        "Email": "shyam@example.com",
+        "Username": "shyam08",
+        "Password": "Password5"
+    },
+    {
+        "UniqueId":6,
+        "Name": "Harry",
+        "Role": "Admin",
+        "Telephone": "9560940938",
+        "Email": "harry@example.com",
+        "Username": "harrydoe456",
+        "Password": "Password6"
+    },
+    {
+        "UniqueId":7,
+        "Name": "Happy",
+        "Role": "Admin",
+        "Telephone": "9993993908",
+        "Email": "happy@example.com",
+        "Username": "happy7676",
+        "Password": "Password@7"
+    },
+    {
+        "UniqueId":8,
+        "Name": "Tanishka",
+        "Role": "Borrower",
+        "Telephone": "9993993908",
+        "Email": "tanishka@example.com",
+        "Username": "tanishka_76",
+        "Password": "Password@8"
+    },
+    {
+        "UniqueId":9,
+        "Name": "Happy",
+        "Role": "Admin",
+        "Telephone": "9993993908",
+        "Email": "happy@example.com",
+        "Username": "happy_7676",
+        "Password": "Password9"
+    },
+    {
+        "UniqueId":10,
+        "Name": "Henry",
+        "Role": "Borrower",
+        "Telephone": "5793998798",
+        "Email": "henry@example.com",
+        "Username": "henry8978",
+        "Password": "Password@10"
+    },
+    {
+        "UniqueId":11,
+        "Name": "Tom",
+        "Role": "Borrower",
+        "Telephone": "7758789097",
+        "Email": "henry@example.com",
+        "Username": "henry88",
+        "Password": "Password11"
+    },
+    {
+        "UniqueId":12,
+        "Name": "Sam",
+        "Role": "Admin",
+        "Telephone": "8978780878",
+        "Email": "sam@example.com",
+        "Username": "henry88",
+        "Password": " "
+    }
+
+
+]
