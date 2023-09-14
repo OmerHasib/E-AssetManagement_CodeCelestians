@@ -1,0 +1,57 @@
+The E-Asset Management system is connected to MySQL to store the data. The database contains the following tables
+1)User
+2)Category
+3)Asset
+4)Borrow
+5)Admin
+
+-> Creating User table - to store user details
+
+CREATE TABLE User (
+    userid INT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    uRole VARCHAR(255),
+    uTelephone BIGINT,
+    uEmail VARCHAR(255),
+    uPassword VARCHAR(255) NOT NULL
+);
+
+-> Creating Category table - to store differnt category of assets available
+
+CREATE TABLE Category (
+    assetType VARCHAR(255) PRIMARY KEY,
+    lendingPeriod INT,
+    lateFee DOUBLE,
+    daysBanned INT
+);
+
+-> Creating Asset table - to store different assets available
+
+CREATE TABLE Asset (
+    assetId INT PRIMARY KEY,
+    assetName VARCHAR(255) NOT NULL,
+    assetType VARCHAR(255) NOT NULL,
+    Description TEXT,
+    dateadded DATE,
+    isAvailable BOOLEAN,
+    FOREIGN KEY (assetType) REFERENCES Category(assetType)
+);
+
+-> Creating Borrow table - to store details of all borrowed items
+
+CREATE TABLE Borrow (
+    userId INT,
+    assetId INT,
+    dateissued DATE,
+    returningDate DATE,
+    FOREIGN KEY (userId) REFERENCES User(userid),
+    FOREIGN KEY (assetId) REFERENCES Asset(assetId)
+);
+
+-> Creating Admin table - to store admin details
+
+CREATE TABLE Admin (
+    adminId VARCHAR(255) PRIMARY KEY,
+    password VARCHAR(255) NOT NULL
+);
+
